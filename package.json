@@ -23,8 +23,8 @@
       "babel --plugins transform-es2015-modules-umd src --watch --ignore tests --out-dir ./dist",
     "prepublish":
       "babel --plugins transform-es2015-modules-umd src --ignore tests --out-dir ./dist",
-    "lint": "eslint 'src/**/*.js'",
-    "prettier": "prettier --write 'src/**/*.{js,jsx,json,css}'",
+    "lint": "eslint '{src,tests}/**/*.{js,jsx,json,css}'",
+    "prettier": "prettier --write '{src,tests}/**/*.{js,jsx,json,css}'",
     "testonly": "mocha $npm_package_options_mocha",
     "test": "npm run lint && npm run testonly",
     "test-watch": "npm run testonly -- --watch --watch-extensions js",

@@ -1,4 +1,10 @@
 {
+  "extends": [
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
   "parser": "babel-eslint",
   "env": {
     "browser": true,
@@ -8,10 +14,16 @@
   "ecmaFeatures": {
     "modules": true
   },
-  "extends": [
-    "prettier"
-  ],
-  "plugins": [
-    "prettier"
-  ]
+  "rules": {
+    "prettier/prettier": ["warn", {
+      "printWidth": 100,
+      "tabWidth": 2,
+      "singleQuote": true,
+      "trailingComma": "es5",
+      "bracketSpacing": true,
+      "jsxBracketSameLine": false,
+      "parser": "babylon",
+      "semi": false
+    }]
+  }
 }
